@@ -1,0 +1,50 @@
+<div *ngFor="let project of projectsList"
+     class="row project mt-4 mb-4">
+
+    <div class="col-7 project-img">
+        <img [src]="project.imgPath" [alt]="project.title">
+    </div>
+
+    <div class="col-5 project-body">
+
+        <h5 class="project-title">{{ project.title }}</h5>
+
+        <div class="badge-list mt-1 mb-2">
+            <span>Stack</span>
+            <br>
+            <span *ngFor="let tech of project.technologies"
+                    class="badge bg-tech text-dark" >
+                {{ tech }}
+            </span>
+        </div>
+
+        <div class="badge-list mt-1 mb-2">
+            <span>Resources</span>
+            <br>
+            <span *ngFor="let resource of project.resources"
+                    class="badge bg-res text-dark" >
+                {{ resource }}
+            </span>
+        </div>
+
+        <p class="project-description pt-1">
+            Project Description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+            Nisi perferendis sunt distinctio dignissimos sed nostrum doloremque commodi! 
+            Vitae ratione, recusandae laudantium aliquid nobis, 
+            voluptas numquam quas temporibus dicta corrupti adipisci..
+        </p>
+
+
+        <div class="btn-container">
+            <a class="btn" [href]="project.urlLive" target="_blank">
+                Live <i class="bi-code-slash"></i>
+            </a>
+            <a class="btn" [href]="project.urlCode" target="_blank">
+                Code <i class="bi-code-slash"></i>
+            </a>
+        </div>
+
+    </div>
+
+</div>
+

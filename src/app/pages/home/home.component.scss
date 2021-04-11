@@ -1,0 +1,53 @@
+@import '../../../assets/sass/color-palette.scss';
+
+$btn-color: $color-5;
+
+#home {
+    overflow-x: hidden;
+    width: 100%; 
+    margin: 0px auto;
+}
+
+.col {
+    width: 95%;
+    margin: 0px auto;
+    box-sizing: border-box;
+}
+
+.title {
+    color: white;
+
+    h1 {
+        font-size: 64px; 
+
+        span {
+            color: $color-5;
+        }
+    }
+    
+    .title-description {
+        font-size: 36px;
+        color: $color-4;
+        margin: 0px auto !important;
+    }
+}
+
+.btn {
+    width: 160px;
+    font-size: 24px;
+    padding: 10px;
+    color: $btn-color;
+    border: 1px solid $btn-color;
+    background-color: transparent;
+    transition: 300ms all;
+    display: block;
+    margin: 0px auto;
+    border-radius: 10px;
+
+    &:hover {
+        color: white;
+        background-color: $btn-color;
+    }
+} 
+
+    

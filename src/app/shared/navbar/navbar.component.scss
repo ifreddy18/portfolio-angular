@@ -1,0 +1,76 @@
+@import '../../../assets/sass/color-palette.scss';
+
+* {
+    transition: 300ms ease;
+}
+
+.navbar-brand {
+    color: $color-5;
+    // font-family: 'Roboto Mono', monospace;
+    // font-family: 'Ubuntu', sans-serif;
+    font-weight: bolder;
+
+    &:hover {
+        color: $color-5;
+    }
+}
+
+.navbar-toggler {
+    border: none;
+
+    .menu {
+        color: $color-5;
+        font-size: 45px;
+    }
+}
+
+.navbar-nav {
+
+    a {
+        color: $color-4 !important;
+        box-sizing: border-box;
+        height: 34px;
+
+        &:hover {
+            color: $color-5 !important;
+        }
+
+        .material-icons {
+            margin: 0px;
+            font-size: 17px;
+
+        }
+    }
+}
+
+.social-icons {
+
+    .bi {
+        color: $color-4 !important;
+        color: white;
+        font-size: 20px;
+        padding: 5px;
+        margin: 0px auto;
+        cursor: pointer;
+
+        &:hover {
+            color: $color-5 !important;
+        }
+    }
+}
+
+.nav-button {
+    color: $color-5 !important;
+    border: 1px solid $color-5;
+    padding: 5px;
+    width: 60px;
+    text-align: center;
+    border-radius: 10px;
+    margin-left: 10px;
+
+    &:hover {
+        color: white !important;
+        background-color: $color-5;
+        font-weight: bold;
+    }
+}

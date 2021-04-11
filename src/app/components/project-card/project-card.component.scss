@@ -1,0 +1,75 @@
+@import '../../../assets/sass/color-palette.scss';
+
+.project {
+    width: 80%;
+    margin: 0px auto;
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+
+    .project-img {
+        padding: 0px;
+        
+        img {
+            border-radius: 10px 0px 0px 10px;
+            object-fit: fill;
+        };
+    }
+
+    .project-body {
+        text-align: start;
+        padding: 15px;
+        border-radius: 0px 10px 10px 0px;
+        background-color: $color-1;
+        color: $color-4;
+        z-index: 1;
+
+        .project-title {
+            color: white;
+        }
+
+
+        .badge-list {
+            .badge {
+                margin-right: 5px;
+                margin-top: 5px;
+            }
+
+            .bg-tech {
+                background-color: $color-5;
+            }
+
+            .bg-res {
+                background-color: $color-7;
+                opacity: 0.8;
+            }
+        }
+
+
+        .btn-container {
+            text-align: end;
+
+            .btn {
+                width: 90px;
+                margin-left: 8px;
+                color: $color-5;
+                border: 1px solid $color-5;
+                border-radius: 10px;
+
+                &:hover {
+                    color: white;
+                    background-color: $color-5;
+                    font-weight: bold   ;
+                }
+
+                &:focus {
+                    box-shadow: none;
+                }
+            }
+        }
+
+    }
+
+}
+

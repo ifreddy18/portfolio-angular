@@ -1,0 +1,28 @@
+@import '../../../assets/sass/color-palette.scss';
+
+$btn-color: $color-5;
+
+.container {
+    text-align: center;
+
+}
+
+h1 {
+    text-align: center;
+    color: white;
+}
+
+.page-descripion {
+    width: 80%;
+    color: $color-4;
+    margin: 0px auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    // text-align: start;
+
+    a {
+        text-decoration: none;
+        color: $color-5;
+    }
+}
+

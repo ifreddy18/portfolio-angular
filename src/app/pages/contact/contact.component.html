@@ -1,0 +1,109 @@
+<div class="container mt-2">
+    <h1>Contact</h1>
+
+    <p>
+        If you want to get it touch with me, you can send me a message to my <a href="https://www.linkedin.com/in/freddy-michelena-057426102/" target="_blank">LinkedIn</a> profile, 
+        to my email <a href="mailto:freddyamm1891@gmail.com" target="_blank">freddyamm1891@gmail.com</a>
+        or you can simple use the next form.
+    </p>
+
+    <form class="form" #form="ngForm" (ngSubmit)="sendForm(form)">
+
+        <!-- Name -->
+        <div class="form-floating mb-3">
+            <input type="text" 
+                   class="form-control" 
+                   id="floatingName" 
+                   placeholder="Name"
+                   minlength="3"
+                   [ngClass]="{'is-invalid': name.invalid && name.touched}"
+                   #name="ngModel"
+                   name="name"
+                   [ngModel]="contact.name"
+                   required>
+
+            <label for="floatingName">
+                Name 
+                <small *ngIf="name.invalid && name.touched"
+                        class="form-text text-danger">
+                        The name must have at least 3 character
+                </small>
+            </label>
+            
+        </div>
+        <!-- Name - End -->
+
+        <!-- Subject -->
+        <div class="form-floating mb-3">
+            <input type="text" 
+                   class="form-control" 
+                   id="floatingSubject" 
+                   placeholder="Subject"
+                   minlength="3"
+                   [ngClass]="{'is-invalid': subject.invalid && subject.touched}"
+                   #subject="ngModel"
+                   name="subject"
+                   [ngModel]="contact.subject"
+                   required>
+
+            <label for="floatingSubject">
+                Subject 
+                <small *ngIf="subject.invalid && subject.touched"
+                        class="form-text text-danger">
+                    The subject must have at least 3 character
+                </small>
+            </label>
+            
+        </div>
+        <!-- Subject - End -->
+
+        <!-- Email -->
+        <div class="form-floating">
+            <input type="email" 
+                   class="form-control" 
+                   id="floatingEmail" 
+                   placeholder="name@example.com"
+                   [ngClass]="{'is-invalid': email.invalid && email.touched}"
+                   #email="ngModel"
+                   name="email"
+                   [ngModel]="contact.email"
+                   required>
+
+            <label for="floatingEmail">
+                Email 
+                <small *ngIf="email.invalid && email.touched"
+                        class="form-text text-danger">
+                    Use a valid email
+                </small>
+            </label>
+        </div>
+        <!-- Email - End -->
+
+        <!-- Message -->
+        <div class="form-floating">
+            <textarea placeholder="//This doesn't shows"
+                      class="form-control" 
+                      id="floatingTextarea"
+                      [ngClass]="{'is-invalid': message.invalid && message.touched}"
+                      #message="ngModel"
+                      name="message"
+                      [ngModel]="contact.message"
+                      minlength="10"
+                      required>
+            </textarea>
+
+            <label for="floatingTextarea">
+                Message
+                <small *ngIf="message.invalid && message.touched"
+                        class="form-text text-danger">
+                    The messsage must have at least 20 character 
+                </small>
+            </label>
+        </div>
+        <!-- Message - End -->
+
+        <button type="submit" class="btn btn-submit">Send message</button>
+
+    </form>
+
+</div>
