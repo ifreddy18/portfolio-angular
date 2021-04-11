@@ -1,58 +1,47 @@
+@use '../../../assets/sass/mixins';
 @import '../../../assets/sass/color-palette.scss';
 
-$btn-color: $color-5;
-
-.container {
-    text-align: center;
-
+* { 
+    @include mixins.all-items; 
 }
 
 h1 {
-    text-align: center;
-    color: white;
+    color: $text-title;
 }
 
 .page-descripion {
+    @include mixins.paragraph;
+    line-height: 22px;
     width: 80%;
-    color: $color-4;
-    margin: 0px auto;
     margin-top: 20px;
     margin-bottom: 20px;
-    text-align: start;
-    font-size: 16px;
-
-    a {
-        text-decoration: none;
-        color: $color-5;
-    }
+    font-size: 18px;
 }
 
-
-.col {
-    
-    justify-content: center;
-
-    .btn-container {
-        width: 70%;
-        margin: 0px auto;
-    
-    }
+.btn-container {
+    padding: 15px;
+    width: 360px;
 }
 
 .btn {
-    display: block;
-    width: 120px;
-    font-size: 16px;
-    padding: 10px;
-    margin: 0px auto;
-    border-radius: 10px;
-    color: $btn-color;
-    border: 1px solid $btn-color;
-    background-color: transparent;
-    transition: 300ms all;
+    @include mixins.btn-outline;
+    width: 140px;
+    font-size: 18px;
+    padding: 8px;
+}
 
-    &:hover {
-        color: white;
-        background-color: $btn-color;
+@media (max-width: 767px) {
+
+    .container {
+        padding-top: 120px;
     }
+
+    .btn-container {
+        width: 80%;
+    }
+
+    .page-descripion {
+        width: 95%;
+    }
+    
 }

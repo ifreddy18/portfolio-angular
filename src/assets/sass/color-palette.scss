@@ -1,20 +1,57 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap');
 
-
-// Paleta - Grises
-$color-1: #181818;
-$color-2: #1D1D1D;
-$color-3: #2A2A2A;
-$color-4: rgba(200, 200, 200, 1);
-// $color-4: #ABABAB;
-// Paleta - Grises
-$color-5: #11AD83;
-$color-6: #0CFAD9;
+// Nuevos colores
+$color-1: #111;
+$color-2: #161616;
+$color-3: #9f9f9f;
+$color-4: #dadada;
+$color-5: #f0f0f0;
+$color-6: #009e66;
 $color-7: #FA0037;
-$color-8: #83FA0C;
-$color-9: #5FAD11;
+
+// // Paleta - Grises
+// $color-1: #181818;
+// $color-2: #1D1D1D;
+// $color-3: #2A2A2A;
+// $color-4: rgba(200, 200, 200, 1);
+// // $color-4: #ABABAB;
+// // Paleta - Grises
+// $color-5: #11AD83;
+// $color-6: #0CFAD9;
+// $color-7: #FA0037;
+// $color-8: #83FA0C;
+// $color-9: #5FAD11;
 
 
-// Otros
-$bg-color: $color-2;
-$bg-color-navbar: $color-1;
+// Variables de la app
+
+// Background
+$bg-color: $color-1;
+$bg-navbar: $color-1;
+$bg-cards: $color-2;
+
+// Navbar
+$text-logo: $color-6;
+$text-nav-item: $color-5;
+$text-nav-item-hover: $color-6;
+$navbar-toggler: $color-6;
+
+// Text
+$text-title: $color-5;
+$text-subtitle: $color-4;
+$text-p: $color-3;
+$text-url: $color-6;
+
+//Badges
+$bg-badge-1: $color-6;
+$bg-badge-2: $color-7;
+
+// Buttons
+$btn-bg: $color-1;
+$btn-bg-hover: $color-6;
+
+// Form inputs
+$bg-input: $color-2;
+$text-input: $color-5;
+$text-placeholder: $color-3;
+
