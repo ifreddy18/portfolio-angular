@@ -1,75 +1,53 @@
+@use '../../../assets/sass/mixins';
 @import '../../../assets/sass/color-palette.scss';
 
 
-$btn-color: $color-5;
-
-.container {
-    text-align: center;
+* {
+    @include mixins.all-items;
 }
 
 h1 {
-    color: white;
+    color: $text-title;
 }
 
 p {
-    width: 620px;
-    color: $color-4;
-    margin: 0px auto;
+    @include mixins.paragraph;
+    max-width: 620px;
     margin-bottom: 20px;
-    text-align: start;
-
-    a {
-        text-decoration: none;
-        color: $color-5;
-    }
+    margin-top: 20px;
+    line-height: 22px;
+    font-size: 18px;
 }
 
 .form-floating {
-    width: 450px;
-    margin: 0px auto;
+    max-width: 450px;
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
-.form-control {
-    color: white;
-    background-color: $color-3;
+label {
+    color: $text-placeholder;
 }
 
-label {
-    color: $color-4 !important;
+input, textarea {
+    @include mixins.form-input;
 }
 
 textarea {
     margin-top: 10px !important;
-    height: 180px !important;
+    min-height: 180px !important;
+    transition: 100ms;
 }
 
-input, textarea {
-    // border: 1px solid $color-4;
-    border: none;
-    background-color: $color-3;
-
-    &:focus {
-        background-color: transparent;
-        outline: none;
-        box-shadow: 2px 2px $color-5, -2px 2px $color-5, 2px -2px $color-5, -2px -2px $color-5;
-    }
-}
 
 .btn-submit {
-    font-size: 16px;
-    padding: 10px;
-    color: $btn-color;
-    border: 1px solid $btn-color;
-    background-color: transparent;
-    transition: 300ms all;
-    display: block;
-    margin: 0px auto;
+    @include mixins.btn-outline;
+    font-size: 18px;
+    padding: 8px;
+}
 
-    &:hover {
-        color: white;
-        background-color: $btn-color;
+@media (max-width: 767px) {
+    .container {
+        padding-top: 120px;
     }
-    
 }

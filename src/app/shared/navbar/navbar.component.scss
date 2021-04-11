@@ -1,17 +1,31 @@
+@use '../../../assets/sass/mixins';
 @import '../../../assets/sass/color-palette.scss';
 
+
 * {
-    transition: 300ms ease;
+    transition: 300ms ease-in-out;
+}
+
+.navbar {
+    height: 95px;
+    background: $bg-navbar;
 }
 
 .navbar-brand {
-    color: $color-5;
-    // font-family: 'Roboto Mono', monospace;
-    // font-family: 'Ubuntu', sans-serif;
+    color: $text-logo;
     font-weight: bolder;
 
     &:hover {
-        color: $color-5;
+        opacity: 0.5;
+    }
+}
+
+.social-icons {
+    .bi {
+        @include mixins.navbar-item;
+        font-size: 20px;
+        margin: 0px auto;
+        cursor: pointer;
     }
 }
 
@@ -19,58 +33,57 @@
     border: none;
 
     .menu {
-        color: $color-5;
-        font-size: 45px;
+        color: $navbar-toggler;
+        font-size: 50px;
     }
 }
 
-.navbar-nav {
-
-    a {
-        color: $color-4 !important;
-        box-sizing: border-box;
-        height: 34px;
-
-        &:hover {
-            color: $color-5 !important;
-        }
-
-        .material-icons {
-            margin: 0px;
-            font-size: 17px;
-
-        }
-    }
+.navbar-collapse {
+    background: $bg-navbar;
 }
 
-.social-icons {
-
-    .bi {
-        color: $color-4 !important;
-        color: white;
-        font-size: 20px;
-        padding: 5px;
-        margin: 0px auto;
-        cursor: pointer;
-
-        &:hover {
-            color: $color-5 !important;
-        }
-    }
+.nav-link {
+    @include mixins.navbar-item;
+    height: 34px;
+    
 }
 
 .nav-button {
-    color: $color-5 !important;
-    border: 1px solid $color-5;
-    padding: 5px;
-    width: 60px;
-    text-align: center;
-    border-radius: 10px;
-    margin-left: 10px;
+    @include mixins.btn-outline;
+    width: 70px !important;
+}
 
-    &:hover {
-        color: white !important;
-        background-color: $color-5;
-        font-weight: bold;
+.nav-item {
+    font-size: 18px;
+    margin-left: 20px;
+}
+
+@media (max-width: 767px) {
+
+    .navbar {
+        width: 100%;
+        top: 0px;
+        position: fixed;
+        z-index: 99;
+        border-bottom: 1px solid $color-2;
     }
+
+    .social-icons {
+        display: none;
+    }
+
+    .navbar-collapse {
+        width: 100%;
+        padding-bottom: 5px;
+    }
+
+    .nav-item {
+        padding: 5px;
+        border-bottom: 1px solid $color-2;
+    }
+
+    .nav-button {
+        border: none;
+    }
+    
 }
